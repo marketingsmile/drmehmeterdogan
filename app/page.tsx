@@ -1,6 +1,6 @@
 import Navbar from "@/components/Navbar";
 import Hero from "@/components/Hero";
-import BbcDocumentarySection from "@/components/BbcDocumentarySection";
+import MediaFeaturesSection from "@/components/MediaFeaturesSection";
 import DoctorProfile from "@/components/DoctorProfile";
 import BeforeAfterSlider from "@/components/BeforeAfterSlider";
 import GraftCalculator from "@/components/GraftCalculator";
@@ -18,7 +18,7 @@ export default function EnglishHomePage() {
     <main className="min-h-screen bg-[#ededed] text-[#0e263f] flex flex-col">
       <Navbar locale={locale} />
       <Hero locale={locale} />
-      <BbcDocumentarySection locale={locale} />
+      <MediaFeaturesSection locale={locale} />
       <DoctorProfile locale={locale} />
       <BeforeAfterSlider locale={locale} />
       <GraftCalculator locale={locale} />

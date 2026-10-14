@@ -18,6 +18,7 @@ import {
   Sparkle
 } from "@phosphor-icons/react";
 import { getDictionary, Locale } from "@/lib/dictionary";
+import { CONTACT_INFO } from "@/data/contact";
 
 interface NavbarProps {
   locale: Locale;
@@ -163,7 +164,7 @@ export default function Navbar({ locale }: NavbarProps) {
 
           <div className="flex items-center gap-4 ml-auto">
             <a
-              href="tel:+905321234567"
+              href={CONTACT_INFO.telHref}
               className="flex items-center gap-1.5 font-bold text-[#0e263f] hover:text-[#415e79] transition-colors"
             >
               <Phone weight="bold" className="w-3.5 h-3.5 text-[#415e79]" />
@@ -219,7 +220,7 @@ export default function Navbar({ locale }: NavbarProps) {
                     : "hover:text-[#415e79]"
                 }`}
               >
-                <span>{dict.nav.about}</span>
+                <span className="whitespace-nowrap">{dict.nav.about}</span>
                 <CaretDown weight="bold" className={`w-4 h-4 text-[#415e79] transition-transform duration-200 ${aboutDropdownOpen ? "rotate-180 text-[#0e263f]" : ""}`} />
               </button>
 
@@ -519,7 +520,7 @@ export default function Navbar({ locale }: NavbarProps) {
               {dict.nav.bookConsultation}
             </Link>
             <a
-              href="tel:+905321234567"
+              href={CONTACT_INFO.telHref}
               className="w-full py-3 text-center rounded-xl bg-[#ededed] text-[#0e263f] border border-slate-300 text-sm font-bold flex items-center justify-center gap-2"
             >
               <Phone weight="bold" className="w-4 h-4 text-[#0e263f]" />

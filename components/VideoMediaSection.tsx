@@ -2,13 +2,12 @@
 
 import { useState } from "react";
 import { 
-  YoutubeLogo, 
-  Play, 
-  Sparkle, 
-  VideoCamera, 
-  ArrowSquareOut, 
-  ShieldCheck 
-} from "@phosphor-icons/react";
+  YoutubeIcon, 
+  PlayIcon, 
+  SparklesIcon, 
+  Video01Icon, 
+  ArrowUpRight01Icon 
+} from "hugeicons-react";
 import { getDictionary, Locale } from "@/lib/dictionary";
 import YouTubeVideoGrid from "@/components/YouTubeVideoGrid";
 import { ALL_YOUTUBE_VIDEOS } from "@/lib/youtubeData";
@@ -25,23 +24,27 @@ export default function VideoMediaSection({ locale }: VideoMediaSectionProps) {
   const playlistData = {
     testimonials: {
       id: "testimonials",
-      title: isTr ? "Hasta Hikayeleri & Canlı Değişim Videoları" : "Patient Case Stories & Transformation Videos",
+      title: isTr 
+        ? "4.600 Greft Saç Ekimi - Dr. Mehmet Erdoğan ile Konsültasyon ve Hasta Serüveni" 
+        : "4,600 Grafts Hair Transplant - Full Journey & Consultation with Dr. Mehmet Erdoğan",
       subtitle: isTr
-        ? "Dr. Mehmet Erdoğan ile saç ekimi yaptıran hastaların 12 aylık değişim serüvenleri ve canlı deneyim videoları."
-        : "Real patient journeys, 12-month growth transformations, and authentic video reviews with Dr. Mehmet Erdoğan.",
-      embedUrl: "https://www.youtube-nocookie.com/embed/Tg1-2P3Cscs",
-      watchUrl: "https://www.youtube.com/watch?v=Tg1-2P3Cscs",
-      badgeText: isTr ? "CANLI HASTA DEĞİŞİMİ" : "PATIENT TRANSFORMATION"
+        ? "Dr. Mehmet Erdoğan'ın bizzat gerçekleştirdiği konsültasyon, donör kapasite analizi, saç çizgisi planlaması ve 4.600 greftlik gerçek hasta dönüşüm süreci."
+        : "Watch Dr. Mehmet Erdoğan personally evaluate donor density, design a natural hairline, and guide the patient through a life-changing 4,600 graft restoration.",
+      embedUrl: "https://www.youtube-nocookie.com/embed/v5R30A_xF4Y",
+      watchUrl: "https://www.youtube.com/watch?v=v5R30A_xF4Y",
+      badgeText: isTr ? "DR. MEHMET ERDOĞAN İLE HASTA DÖNÜŞÜMÜ" : "DR. MEHMET ERDOĞAN PATIENT JOURNEY"
     },
     masterclasses: {
       id: "masterclasses",
-      title: isTr ? "Safir & DHI Cerrahi Teknik Anlatımları" : "Surgical Techniques & Masterclasses",
+      title: isTr 
+        ? "Greftlerin Tutunması ve İyileşme Takvimi | Dr. Mehmet Erdoğan" 
+        : "Graft Survival & Post-Op Recovery Milestones | Dr. Mehmet Erdoğan",
       subtitle: isTr
-        ? "Dr. Mehmet Erdoğan'ın Safir FUE, DHI ve saç çizgisi tasarımı üzerine detaylı cerrahi rehber videoları."
-        : "In-depth medical guides by Hair Transplant Doctor Dr. Mehmet Erdoğan explaining Sapphire FUE, DHI, and hairline design.",
-      embedUrl: "https://www.youtube-nocookie.com/embed/cbcpqrIUnyQ",
-      watchUrl: "https://www.youtube.com/watch?v=cbcpqrIUnyQ",
-      badgeText: isTr ? "CERRAHİ REHBER" : "SURGICAL MASTERCLASS"
+        ? "Dr. Mehmet Erdoğan, saç köklerinin deriye kaynaşma biyolojisini, kritik günleri ve normal hayata dönüş sürecini detaylarıyla anlatıyor."
+        : "Dr. Mehmet Erdoğan explains the exact medical timeline for hair graft anchor strength, scalp healing, and returning to everyday routines.",
+      embedUrl: "https://www.youtube-nocookie.com/embed/v0H94iyJR7M",
+      watchUrl: "https://www.youtube.com/watch?v=v0H94iyJR7M",
+      badgeText: isTr ? "DR. MEHMET ERDOĞAN CERRAHİ REHBER" : "SURGICAL RECOVERY GUIDE"
     }
   };
 
@@ -52,7 +55,7 @@ export default function VideoMediaSection({ locale }: VideoMediaSectionProps) {
         {/* Section Header */}
         <div className="text-center max-w-3xl mx-auto mb-14">
           <div className="inline-flex items-center gap-2 px-4 py-1.5 rounded-full bg-[#ededed] border border-[#415e79]/30 text-[#0e263f] text-xs font-bold uppercase tracking-wider mb-4 shadow-sm">
-            <YoutubeLogo weight="fill" className="w-4 h-4 text-[#0e263f]" />
+            <YoutubeIcon size={16} strokeWidth={2} className="text-[#0e263f]" />
             <span>{isTr ? "RESMİ YOUTUBE VİDEO ARŞİVİ" : "OFFICIAL YOUTUBE MEDIA & INSIGHTS"}</span>
           </div>
           <h2 className="font-heading text-3xl sm:text-4xl lg:text-5xl font-extrabold text-[#0e263f] tracking-tight mb-4">
@@ -75,7 +78,7 @@ export default function VideoMediaSection({ locale }: VideoMediaSectionProps) {
                 : "bg-[#ededed] text-[#0e263f] hover:bg-slate-200 border border-[#415e79]/20"
             }`}
           >
-            <VideoCamera weight="bold" className={`w-4 h-4 ${activeTab === "testimonials" ? "text-white" : "text-[#415e79]"}`} />
+            <Video01Icon size={18} strokeWidth={1.8} className={activeTab === "testimonials" ? "text-white" : "text-[#415e79]"} />
             <span>{isTr ? "Hasta Yorumları & Değişimler" : "Patient Transformations"}</span>
           </button>
 
@@ -87,7 +90,7 @@ export default function VideoMediaSection({ locale }: VideoMediaSectionProps) {
                 : "bg-[#ededed] text-[#0e263f] hover:bg-slate-200 border border-[#415e79]/20"
             }`}
           >
-            <Play weight="fill" className={`w-4 h-4 ${activeTab === "masterclasses" ? "text-white" : "text-[#415e79]"}`} />
+            <PlayIcon size={18} strokeWidth={1.8} className={activeTab === "masterclasses" ? "text-white" : "text-[#415e79]"} />
             <span>{isTr ? "Cerrahi Teknik Masterclass" : "Surgical Masterclasses"}</span>
           </button>
         </div>
@@ -116,7 +119,7 @@ export default function VideoMediaSection({ locale }: VideoMediaSectionProps) {
                 <div className="lg:col-span-5 flex flex-col justify-between space-y-6">
                   <div>
                     <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-white border border-[#415e79]/30 text-xs font-extrabold text-[#0e263f] mb-3">
-                      <Sparkle weight="bold" className="w-3.5 h-3.5 text-[#0e263f]" />
+                      <SparklesIcon size={16} strokeWidth={1.8} className="text-[#0e263f]" />
                       <span>{current.badgeText}</span>
                     </div>
                     <h3 className="font-heading font-extrabold text-2xl text-[#0e263f] leading-snug mb-3">
@@ -134,9 +137,9 @@ export default function VideoMediaSection({ locale }: VideoMediaSectionProps) {
                       rel="noopener noreferrer"
                       className="inline-flex items-center justify-center gap-3 w-full py-4 rounded-xl bg-[#0e263f] hover:bg-[#173656] text-white font-extrabold text-sm shadow-md hover:shadow-lg transition-all transform hover:-translate-y-0.5 group"
                     >
-                      <YoutubeLogo weight="fill" className="w-5 h-5 text-white" />
+                      <YoutubeIcon size={20} strokeWidth={2} className="text-white" />
                       <span>{isTr ? "YouTube'da İzle" : "Watch on YouTube"}</span>
-                      <ArrowSquareOut weight="bold" className="w-4 h-4 text-white group-hover:translate-x-0.5 transition-transform" />
+                      <ArrowUpRight01Icon size={18} strokeWidth={2} className="text-white group-hover:translate-x-0.5 group-hover:-translate-y-0.5 transition-transform" />
                     </a>
                   </div>
                 </div>

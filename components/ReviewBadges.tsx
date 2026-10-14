@@ -1,5 +1,6 @@
-import { Star } from "@phosphor-icons/react";
+import { StarIcon } from "hugeicons-react";
 import { Locale } from "@/lib/dictionary";
+import { REVIEW_BADGES } from "@/data/trust";
 
 interface ReviewBadgesProps {
   locale: Locale;
@@ -7,63 +8,60 @@ interface ReviewBadgesProps {
 
 export default function ReviewBadges({ locale }: ReviewBadgesProps) {
   const isTr = locale === "tr";
-  const commentText = isTr ? "Yorum" : "Reviews";
 
-  const reviews = [
-    {
-      platform: "Google",
-      score: "4.9",
-      bgColor: "bg-[#ea4335]",
-      count: `5,000+ ${commentText}`,
-      url: "https://www.google.com/maps/place//data=!4m3!3m2!1s0x14cac8b2a33a8b65:0xbc589f8816b1c1fa!12e1?source=g.page.m._&laa=merchant-review-solicitation",
-      renderLogo: () => (
-        <div className="flex flex-col items-start leading-tight">
-          <span className="font-extrabold text-[#0e263f] text-xs tracking-tight">Google</span>
-          <span className="text-[8px] uppercase tracking-wider text-[#415e79] font-bold -mt-0.5">AVERAGE RATING</span>
-        </div>
-      ),
-      starColor: "text-amber-400"
-    },
-    {
-      platform: "Trustpilot",
-      score: "4.9",
-      bgColor: "bg-[#00b67a]",
-      count: `3,000+ ${commentText}`,
-      url: "https://www.trustpilot.com/review/www.smilehairclinic.com",
-      renderLogo: () => (
-        <div className="flex items-center gap-1">
-          <span className="font-extrabold text-[#0e263f] text-xs tracking-tight">Trustpilot</span>
-        </div>
-      ),
-      starColor: "text-[#00b67a]"
-    },
-    {
-      platform: "ProvenExpert",
-      score: "4.9",
-      bgColor: "bg-[#c8b070]",
-      count: `1,800+ ${commentText}`,
-      url: "https://www.provenexpert.com/tr-tr/smile-hair-transplant-clinic-istanbul/",
-      renderLogo: () => (
-        <div className="flex items-center gap-1">
-          <span className="font-extrabold text-[#0e263f] text-xs tracking-tight">Proven Expert</span>
-        </div>
-      ),
-      starColor: "text-amber-400"
-    },
-    {
-      platform: "RealSelf",
-      score: "5.0",
-      bgColor: "bg-[#ff7474]",
-      count: `250+ ${commentText}`,
-      url: "https://www.realself.com/dr/mehmet-erdogan-istanbul-turkey",
-      renderLogo: () => (
-        <div className="flex items-center gap-1">
-          <span className="font-extrabold text-[#0e263f] text-xs tracking-tight">realself.</span>
-        </div>
-      ),
-      starColor: "text-amber-400"
+  const renderBadgeLogo = (platform: string) => {
+    switch (platform) {
+      case "Google":
+        return (
+          <div className="flex items-center gap-1.5">
+            <img 
+              src="/images/google-g-clean.png" 
+              alt="Google" 
+              className="h-3.5 w-3.5 object-contain"
+            />
+            <span className="font-heading font-extrabold text-[#0e263f] text-xs tracking-tight">Google</span>
+            <span className="text-[7.5px] font-bold text-slate-400 uppercase tracking-tight hidden sm:inline">AVG RATING</span>
+          </div>
+        );
+      case "Trustpilot":
+        return (
+          <div className="flex items-center">
+            <img 
+              src="/images/trustpilot-clean.png" 
+              alt="Trustpilot" 
+              className="h-3.5 w-auto object-contain"
+            />
+          </div>
+        );
+      case "ProvenExpert":
+        return (
+          <div className="flex items-center gap-1.5">
+            <div className="w-3.5 h-3.5 rounded-full bg-[#c8b070] flex items-center justify-center shrink-0">
+              <svg className="w-2.5 h-2.5 text-white" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={3.5}>
+                <path strokeLinecap="round" strokeLinejoin="round" d="M5 13l4 4L19 7" />
+              </svg>
+            </div>
+            <span className="font-heading font-extrabold text-[#0e263f] text-xs tracking-tight">Proven Expert</span>
+          </div>
+        );
+      case "RealSelf":
+        return (
+          <div className="flex items-center">
+            <span className="font-heading font-black text-[#0e263f] text-[13px] tracking-tight">
+              realself<span className="text-[#ff6868] text-base leading-none">.</span>
+            </span>
+          </div>
+        );
+      default:
+        return null;
     }
-  ];
+  };
+
+  const reviews = REVIEW_BADGES.map((b) => ({
+    ...b,
+    count: isTr ? b.countTr : b.countEn,
+    renderLogo: () => renderBadgeLogo(b.platform),
+  }));
 
   return (
     <div className="w-full my-6">
@@ -86,13 +84,14 @@ export default function ReviewBadges({ locale }: ReviewBadgesProps) {
               </div>
 
               {/* Logo & 5 Stars Right Box */}
-              <div className="px-2 py-1 flex flex-col justify-center flex-1 min-w-0">
+              <div className="px-2.5 py-1.5 flex flex-col justify-center flex-1 min-w-0">
                 {badge.renderLogo()}
-                <div className="flex items-center gap-0.5 mt-0.5">
+                <div className="flex items-center gap-0.5 mt-1">
                   {[...Array(5)].map((_, i) => (
-                    <Star
+                    <StarIcon
                       key={i}
-                      className={`w-2.5 h-2.5 fill-current ${badge.starColor}`}
+                      size={11}
+                      className={badge.starColor}
                     />
                   ))}
                 </div>

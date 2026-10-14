@@ -68,7 +68,7 @@ export default function PackagesGrid({ locale }: PackagesGridProps) {
                     <div className="w-5 h-5 rounded-full bg-[#dda83e]/20 text-[#b45309] flex items-center justify-center shrink-0 mt-0.5">
                       <Check weight="bold" className="w-3.5 h-3.5" />
                     </div>
-                    <span>{isTr ? "Dr. Mehmet Erdoğan & Medikal Ekip konsültasyonu" : "Consultation & planning by Dr. Mehmet Erdoğan & Team"}</span>
+                    <span>{isTr ? "Dr. Ali Osman Soluk / Dr. M. Reşat Arpacı konsültasyonu & planlaması" : "Consultation & surgical planning by Dr. Ali Osman Soluk / Dr. M. Reşat Arpacı"}</span>
                   </li>
                   <li className="flex items-start gap-3">
                     <div className="w-5 h-5 rounded-full bg-[#dda83e]/20 text-[#b45309] flex items-center justify-center shrink-0 mt-0.5">
@@ -149,13 +149,13 @@ export default function PackagesGrid({ locale }: PackagesGridProps) {
                     <div className="w-5 h-5 rounded-full bg-slate-200 text-slate-700 flex items-center justify-center shrink-0 mt-0.5">
                       <Check weight="bold" className="w-3.5 h-3.5" />
                     </div>
-                    <span>{isTr ? "Dr. Mehmet Erdoğan & Kıdemli Ekip konsültasyonu" : "Consultation & planning by Dr. Mehmet Erdoğan & Senior Team"}</span>
+                    <span>{isTr ? "Dr. Ali Osman Soluk / Dr. M. Reşat Arpacı konsültasyonu & planlaması" : "Consultation & surgical planning by Dr. Ali Osman Soluk / Dr. M. Reşat Arpacı"}</span>
                   </li>
                   <li className="flex items-start gap-3">
                     <div className="w-5 h-5 rounded-full bg-slate-200 text-slate-700 flex items-center justify-center shrink-0 mt-0.5">
                       <Check weight="bold" className="w-3.5 h-3.5" />
                     </div>
-                    <span>{isTr ? "Safir kanal açımı Dr. Mehmet Erdoğan tarafından" : "Sapphire incision by Dr. Mehmet Erdoğan"}</span>
+                    <span>{isTr ? "Safir kanal açımı Dr. Ali Osman Soluk / Dr. M. Reşat Arpacı tarafından" : "Sapphire incision personally performed by Dr. Ali Osman Soluk / Dr. M. Reşat Arpacı"}</span>
                   </li>
                   <li className="flex items-start gap-3">
                     <div className="w-5 h-5 rounded-full bg-slate-200 text-slate-700 flex items-center justify-center shrink-0 mt-0.5">
@@ -230,8 +230,8 @@ export default function PackagesGrid({ locale }: PackagesGridProps) {
                   </span>
                   <p className="text-xs text-slate-200 leading-relaxed font-medium mb-3">
                     {isTr 
-                      ? "Bizzat kurucu hekimimiz Dr. Mehmet Erdoğan ve kıdemli başhekimlerimiz tarafından uygulanır."
-                      : "Performed exclusively by our founding doctor, Dr. Mehmet Erdoğan, or by our senior head doctor."}
+                      ? "Bizzat kurucu hekimimiz Dr. Mehmet Erdoğan, Dr. Gökay Bilgin veya Başhekim Dr. Firdavs Ahmedov tarafından uygulanır."
+                      : "Performed exclusively by founding doctor Dr. Mehmet Erdoğan, Dr. Gökay Bilgin, or Head Doctor Dr. Firdavs Ahmedov."}
                   </p>
                   <ul className="space-y-1.5 text-xs text-slate-200 font-semibold">
                     <li className="flex items-center gap-2">

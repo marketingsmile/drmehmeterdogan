@@ -56,9 +56,9 @@ export default function TrPressAndAwardsPage() {
 
   const pressItems = [
     {
-      outlet: "BBC World News / Belgesel",
+      outlet: "BBC Belgeseli",
       type: "Uluslararası TV Belgeseli",
-      title: "Türkiye'de Saç Ekimi: Smile Hair Clinic İncelemesi",
+      title: "Türkiye'de Saç Ekimi - Smile Hair Clinic İncelemesi",
       date: "Özel Belgesel Yayını",
       desc: "BBC, İngiltere'den gelen hasta Paul Readman'ın tüm saç ekim operasyonunu ve dönüşümünü Smile Hair Clinic'te tarafsız olarak kayda aldı.",
       link: "https://www.youtube.com/watch?v=49hX6q5mpV4"

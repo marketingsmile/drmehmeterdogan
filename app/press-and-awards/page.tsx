@@ -59,9 +59,9 @@ export default function PressAndAwardsPage() {
 
   const pressItems = [
     {
-      outlet: "BBC World News / Documentary",
+      outlet: "BBC Documentary",
       type: "International TV Documentary",
-      title: "Hair Transplant in Turkey: An In-Depth Look at Smile Hair Clinic",
+      title: "Hair Transplant in Turkey - An In-Depth Look at Smile Hair Clinic",
       date: "Documentary Feature",
       desc: "BBC filmed patient Paul Readman's complete surgical transformation at Smile Hair Clinic, highlighting Turkey's medical tourism excellence.",
       link: "https://www.youtube.com/watch?v=49hX6q5mpV4"
@@ -203,7 +203,7 @@ export default function PressAndAwardsPage() {
               Press Coverage & Scientific Presentations
             </h2>
             <p className="text-[#415e79] text-base font-medium">
-              Featured on BBC World News and international medical conferences.
+              Featured on BBC and international medical conferences.
             </p>
           </div>
 

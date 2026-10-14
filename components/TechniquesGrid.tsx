@@ -92,7 +92,7 @@ export default function TechniquesGrid({ locale, showVideos = false }: Technique
     },
     {
       badge: "Needle-Free",
-      image: "/images/dr-mehmet-erdogan-consultation.webp",
+      image: "/images/Dr. Mehmet Erdogan hair transplant procedure.jpg",
       title: isTr ? "İğnesiz Konfor Anestezisi" : "Needle-Free Comfort Anesthesia",
       desc: isTr
         ? "Yüksek basınçlı mikro püskürtme teknolojisiyle iğne korkusu ve acısı olmadan maksimum konforlu lokal anestezi."
@@ -103,7 +103,7 @@ export default function TechniquesGrid({ locale, showVideos = false }: Technique
     },
     {
       badge: "Doctor Assessment",
-      image: "/images/dr-mehmet-erdogan.webp",
+      image: "/images/dr mehmet erdogan before photo of patient.jpg",
       title: isTr ? "Hangi Yöntem Size Uygun?" : "Not Sure Which Technique?",
       desc: isTr
         ? "Dr. Mehmet Erdoğan fotoğraflarınızı bizzat inceleyerek saç teli kalınlığınıza ve donörünüze en uygun yöntemi seçer."

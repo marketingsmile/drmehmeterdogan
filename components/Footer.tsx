@@ -3,6 +3,7 @@
 import Link from "next/link";
 import { MapPin, Phone, Envelope, ArrowUp } from "@phosphor-icons/react";
 import { getDictionary, Locale } from "@/lib/dictionary";
+import { CONTACT_INFO } from "@/data/contact";
 
 interface FooterProps {
   locale: Locale;
@@ -107,14 +108,14 @@ export default function Footer({ locale }: FooterProps) {
               </li>
               <li className="flex items-center gap-2.5">
                 <Phone weight="bold" className="w-4 h-4 text-[#0e263f] shrink-0" />
-                <a href="tel:+905321234567" className="hover:text-[#415e79] transition-colors font-bold">
-                  {dict.footer.phone}
+                <a href={CONTACT_INFO.telHref} className="hover:text-[#415e79] transition-colors font-bold">
+                  {CONTACT_INFO.phoneDisplay}
                 </a>
               </li>
               <li className="flex items-center gap-2.5">
                 <Envelope weight="bold" className="w-4 h-4 text-[#0e263f] shrink-0" />
-                <a href="mailto:info@drmehmeterdogan.com" className="hover:text-[#415e79] transition-colors font-bold">
-                  {dict.footer.email}
+                <a href={CONTACT_INFO.mailHref} className="hover:text-[#415e79] transition-colors font-bold">
+                  {CONTACT_INFO.email}
                 </a>
               </li>
             </ul>

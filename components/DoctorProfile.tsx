@@ -1,8 +1,14 @@
 "use client";
 
-import { Trophy, CheckCircle, Sparkle, Quotes } from "@phosphor-icons/react";
+import { 
+  Award01Icon, 
+  CheckmarkBadge01Icon, 
+  SparklesIcon, 
+  QuotesIcon 
+} from "hugeicons-react";
 import { getDictionary, Locale } from "@/lib/dictionary";
 import MedicalPlatformProfiles from "@/components/MedicalPlatformProfiles";
+import { QuoteCard, FeatureCard } from "@/components/shared";
 
 interface DoctorProfileProps {
   locale: Locale;
@@ -24,7 +30,7 @@ export default function DoctorProfile({ locale }: DoctorProfileProps) {
               <div className="bg-white rounded-[23px] overflow-hidden p-3 backdrop-blur-xl">
                 <div className="relative rounded-2xl overflow-hidden aspect-[4/5] bg-slate-100 border border-slate-200">
                   <img
-                    src="/images/dr-mehmet-erdogan-consultation.webp"
+                    src="/images/dr mehmet erdogan with consultation patient.jpg"
                     alt="Dr. Mehmet Erdoğan - Expert Hair Transplant Doctor in Consultation"
                     className="w-full h-full object-cover object-center"
                   />
@@ -34,7 +40,7 @@ export default function DoctorProfile({ locale }: DoctorProfileProps) {
                   <div className="absolute bottom-6 left-6 right-6 p-4 rounded-2xl bg-white/95 backdrop-blur-md border border-slate-200 shadow-lg">
                     <div className="flex items-center gap-3">
                       <div className="p-2.5 rounded-xl bg-[#0e263f] text-white shadow-sm">
-                        <Trophy weight="bold" className="w-6 h-6 text-white" />
+                        <Award01Icon size={22} strokeWidth={2} className="text-white" />
                       </div>
                       <div>
                         <h4 className="font-heading font-bold text-[#0e263f] text-sm sm:text-base">
@@ -68,16 +74,12 @@ export default function DoctorProfile({ locale }: DoctorProfileProps) {
               <p>{dict.doctor.bioParagraph3}</p>
             </div>
 
-            {/* Quote Box */}
-            <div className="glass-panel p-5 rounded-2xl border-l-4 border-l-[#0e263f] mb-8 relative bg-slate-50 border border-slate-200">
-              <Quotes weight="fill" className="w-8 h-8 text-[#0e263f]/20 absolute top-3 right-3" />
-              <p className="font-heading italic text-[#0e263f] text-sm sm:text-base font-medium leading-relaxed relative z-10">
-                "{dict.doctor.quote}"
-              </p>
-              <span className="block text-xs font-bold text-[#415e79] mt-2">
-                — Dr. Mehmet Erdoğan (Hair Transplant Doctor)
-              </span>
-            </div>
+            {/* Quote Box using shared QuoteCard (Strictly no em-dash) */}
+            <QuoteCard
+              quote={dict.doctor.quote}
+              author="Dr. Mehmet Erdoğan (Hair Transplant Doctor)"
+              className="mb-8"
+            />
 
             {/* Core Surgical Pillars Grid */}
             <div className="border-t border-slate-200 pt-6">
@@ -87,20 +89,11 @@ export default function DoctorProfile({ locale }: DoctorProfileProps) {
 
               <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
                 {dict.doctor.keyPoints.map((point, idx) => (
-                  <div
+                  <FeatureCard
                     key={idx}
-                    className="p-4 rounded-xl bg-slate-50 border border-slate-200 hover:border-[#0e263f] transition-colors"
-                  >
-                    <div className="flex items-center gap-2 mb-1.5">
-                      <CheckCircle weight="fill" className="w-4 h-4 text-[#415e79] shrink-0" />
-                      <h5 className="font-bold text-[#0e263f] text-sm">
-                        {point.title}
-                      </h5>
-                    </div>
-                    <p className="text-xs text-slate-600 leading-normal font-medium">
-                      {point.desc}
-                    </p>
-                  </div>
+                    title={point.title}
+                    description={point.desc}
+                  />
                 ))}
               </div>
             </div>

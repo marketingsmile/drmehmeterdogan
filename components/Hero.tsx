@@ -5,18 +5,19 @@ import Link from "next/link";
 import gsap from "gsap";
 import { useGSAP } from "@gsap/react";
 import { 
-  Trophy, 
-  Sparkle, 
-  Calculator, 
-  ArrowRight, 
-  CheckCircle, 
-  CalendarBlank,
-  Medal,
-  ShieldCheck,
-  Star
-} from "@phosphor-icons/react";
+  Award01Icon, 
+  SparklesIcon, 
+  Tag01Icon, 
+  ArrowRight01Icon, 
+  CheckmarkBadge01Icon, 
+  Calendar03Icon,
+  Medal01Icon,
+  Shield01Icon,
+  StarIcon
+} from "hugeicons-react";
 import { getDictionary, Locale } from "@/lib/dictionary";
 import ReviewBadges from "@/components/ReviewBadges";
+import { StatCard } from "@/components/shared";
 
 interface HeroProps {
   locale: Locale;
@@ -49,10 +50,10 @@ export default function Hero({ locale }: HeroProps) {
   );
 
   const statIcons = [
-    <CalendarBlank key="cal" weight="bold" className="w-5 h-5 text-[#415e79]" />,
-    <Medal key="exp" weight="bold" className="w-5 h-5 text-[#415e79]" />,
-    <ShieldCheck key="surv" weight="bold" className="w-5 h-5 text-[#415e79]" />,
-    <Star key="star" weight="fill" className="w-5 h-5 text-[#415e79]" />
+    <Calendar03Icon key="cal" size={20} strokeWidth={1.75} className="text-[#415e79]" />,
+    <Medal01Icon key="exp" size={20} strokeWidth={1.75} className="text-[#415e79]" />,
+    <Shield01Icon key="surv" size={20} strokeWidth={1.75} className="text-[#415e79]" />,
+    <StarIcon key="star" size={20} strokeWidth={1.75} className="text-[#415e79]" />
   ];
 
   return (
@@ -74,7 +75,7 @@ export default function Hero({ locale }: HeroProps) {
               ref={badgeRef}
               className="inline-flex items-center gap-2 px-4 py-1.5 rounded-full bg-white border border-[#415e79]/30 text-[#0e263f] text-xs font-bold tracking-wide shadow-sm mb-6"
             >
-              <Trophy weight="bold" className="w-4 h-4 text-[#0e263f]" />
+              <Award01Icon size={16} strokeWidth={1.8} className="text-[#0e263f]" />
               <span>{dict.hero.badge}</span>
             </div>
 
@@ -103,20 +104,21 @@ export default function Hero({ locale }: HeroProps) {
               className="flex flex-col sm:flex-row items-stretch sm:items-center gap-4 w-full sm:w-auto mb-6"
             >
               <Link
-                href={`${basePrefix}/graft-calculator`}
-                className="px-8 py-4 rounded-xl bg-[#0e263f] hover:bg-[#173656] text-white font-extrabold text-base shadow-lg hover:shadow-xl flex items-center justify-center gap-3 transition-all transform hover:-translate-y-1"
+                href={`${basePrefix}/hair-transplant`}
+                className="group px-8 py-4 rounded-xl bg-[#0e263f] hover:bg-[#173656] text-white font-extrabold text-base shadow-lg hover:shadow-xl flex items-center justify-center gap-3 transition-all transform hover:-translate-y-0.5"
               >
-                <Calculator weight="bold" className="w-5 h-5 text-white" />
+                <SparklesIcon size={20} strokeWidth={1.8} className="text-white" />
                 <span>{dict.hero.ctaPrimary}</span>
-                <ArrowRight weight="bold" className="w-4 h-4 text-white" />
+                <ArrowRight01Icon size={18} strokeWidth={2} className="text-white transition-transform group-hover:translate-x-1" />
               </Link>
 
               <Link
-                href={`${basePrefix}/before-after`}
-                className="px-8 py-4 rounded-xl bg-white hover:bg-white/80 text-[#0e263f] font-bold text-base border border-[#415e79]/30 shadow-sm flex items-center justify-center gap-2 transition-all hover:border-[#0e263f]"
+                href={`${basePrefix}/cost`}
+                className="group px-8 py-4 rounded-xl bg-white hover:bg-slate-50 text-[#0e263f] font-bold text-base border border-[#415e79]/30 shadow-sm hover:shadow flex items-center justify-center gap-2.5 transition-all hover:border-[#0e263f] transform hover:-translate-y-0.5"
               >
-                <Sparkle weight="bold" className="w-4 h-4 text-[#0e263f]" />
+                <Tag01Icon size={18} strokeWidth={1.8} className="text-[#0e263f]" />
                 <span>{dict.hero.ctaSecondary}</span>
+                <ArrowRight01Icon size={16} strokeWidth={2} className="text-[#415e79] opacity-75 group-hover:opacity-100 group-hover:translate-x-1 transition-all" />
               </Link>
             </div>
 
@@ -126,15 +128,15 @@ export default function Hero({ locale }: HeroProps) {
             {/* Credentials Bullet Points */}
             <div className="flex flex-wrap items-center gap-y-2 gap-x-6 text-xs sm:text-sm text-[#0e263f] font-semibold pt-4 border-t border-[#415e79]/20 w-full">
               <div className="flex items-center gap-2">
-                <CheckCircle weight="fill" className="w-4 h-4 text-[#0e263f]" />
+                <CheckmarkBadge01Icon size={18} strokeWidth={1.8} className="text-[#0e263f]" />
                 <span>SAÇREHDER President & Founder</span>
               </div>
               <div className="flex items-center gap-2">
-                <CheckCircle weight="fill" className="w-4 h-4 text-[#0e263f]" />
+                <CheckmarkBadge01Icon size={18} strokeWidth={1.8} className="text-[#0e263f]" />
                 <span>FUE Europe Member</span>
               </div>
               <div className="flex items-center gap-2">
-                <CheckCircle weight="fill" className="w-4 h-4 text-[#0e263f]" />
+                <CheckmarkBadge01Icon size={18} strokeWidth={1.8} className="text-[#0e263f]" />
                 <span>World FUE Institute</span>
               </div>
             </div>
@@ -161,28 +163,12 @@ export default function Hero({ locale }: HeroProps) {
           className="mt-12 sm:mt-16 grid grid-cols-2 md:grid-cols-4 gap-4 lg:gap-6"
         >
           {dict.hero.stats.map((stat, idx) => (
-            <div
+            <StatCard
               key={idx}
-              className="group relative bg-gradient-to-b from-white via-white to-slate-50/90 p-5 sm:p-6 rounded-2xl border border-[#415e79]/20 shadow-sm hover:shadow-md hover:border-[#0e263f] transition-all duration-300 hover:-translate-y-1 flex flex-col items-center text-center overflow-hidden"
-            >
-              {/* Subtle top medical indicator line */}
-              <div className="absolute top-0 inset-x-0 h-1 bg-gradient-to-r from-transparent via-[#415e79]/40 to-transparent group-hover:via-[#0e263f] transition-colors" />
-
-              {/* Icon badge */}
-              <div className="w-10 h-10 rounded-xl bg-slate-100/90 border border-[#415e79]/15 flex items-center justify-center mb-3 group-hover:scale-110 transition-transform">
-                {statIcons[idx] || <ShieldCheck weight="bold" className="w-5 h-5 text-[#415e79]" />}
-              </div>
-
-              {/* Metric Number */}
-              <span className="font-heading font-extrabold text-3xl sm:text-4xl text-[#0e263f] tracking-tight mb-1">
-                {stat.number}
-              </span>
-
-              {/* Label */}
-              <span className="text-xs sm:text-sm text-[#415e79] font-bold tracking-tight">
-                {stat.label}
-              </span>
-            </div>
+              icon={statIcons[idx] || <Shield01Icon size={20} strokeWidth={1.75} className="text-[#415e79]" />}
+              number={stat.number}
+              label={stat.label}
+            />
           ))}
         </div>
       </div>

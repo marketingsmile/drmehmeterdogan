@@ -200,7 +200,7 @@ export default function GraftCalculator({ locale }: GraftCalculatorProps) {
                   </div>
                 </div>
 
-                {/* Turkey Dr. Mehmet Erdogan Featured Rate */}
+                {/* Turkey Featured Rate Row */}
                 <div className="p-3.5 rounded-xl bg-[#0e263f] text-white flex items-center justify-between">
                   <div className="flex items-center gap-2.5">
                     <div className="w-8 h-8 rounded-lg bg-white/15 flex items-center justify-center font-bold text-white text-xs">
@@ -208,18 +208,20 @@ export default function GraftCalculator({ locale }: GraftCalculatorProps) {
                     </div>
                     <div>
                       <span className="text-[10px] uppercase font-bold text-slate-300 block">
-                        Dr. Mehmet Erdoğan (Istanbul VIP Package)
+                        {isTr ? "Başlangıç Fiyatı €2.390, her şey dâhil" : "Starting from €2,390, all-inclusive"}
                       </span>
                       <span className="text-xs font-semibold text-white">
-                        5-Star Hotel + VIP Transfers + Care Included
+                        {isTr ? "Otel + VIP Transfer + Bakım Paketi Dâhil" : "Hotel + VIP Transfers + Care Included"}
                       </span>
                     </div>
                   </div>
                   <div className="text-right">
                     <span className="font-heading font-extrabold text-lg sm:text-xl text-white block">
-                      €{costs.turkey.price.toLocaleString()}
+                      €2,390
                     </span>
-                    <span className="text-[10px] text-slate-300 font-medium">All-Inclusive</span>
+                    <span className="text-[10px] text-slate-300 font-medium">
+                      {isTr ? "Her Şey Dâhil" : "All-Inclusive"}
+                    </span>
                   </div>
                 </div>
               </div>

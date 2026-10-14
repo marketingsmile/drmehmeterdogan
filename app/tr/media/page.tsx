@@ -1,6 +1,6 @@
 import type { Metadata } from "next";
 import Navbar from "@/components/Navbar";
-import BbcDocumentarySection from "@/components/BbcDocumentarySection";
+import MediaFeaturesSection from "@/components/MediaFeaturesSection";
 import ConsultationSection from "@/components/ConsultationSection";
 import Footer from "@/components/Footer";
 import YouTubeVideoGrid from "@/components/YouTubeVideoGrid";
@@ -12,22 +12,19 @@ import {
 export const metadata: Metadata = {
   title: "Medya & Basın Arşivi | Dr. Mehmet Erdoğan",
   description: "Dr. Mehmet Erdoğan ve Smile Hair Clinic'in uluslararası belgeselleri, BBC çekimleri, küresel basın haberleri ve canlı cerrahi anlatımları.",
-  keywords: ["Dr Mehmet Erdogan Medya", "BBC Türkiye Saç Ekimi", "Smile Hair Clinic Basın", "Reuters Saç Ekimi", "Safir FUE Video"],
+  keywords: ["Dr Mehmet Erdogan Medya", "BBC Türkiye Saç Ekimi", "Smile Hair Clinic Basın", "Saç Ekimi Belgeseli", "Safir FUE Video"],
 };
 
 export default function TrMediaPage() {
   const locale = "tr";
 
   const mediaLogos = [
-    { name: "Reuters", file: "/trust bar logos/reuters-logo.webp" },
     { name: "ABC News", file: "/trust bar logos/abc-news-logo.webp" },
+    { name: "ABC Australia", file: "/trust bar logos/abc-aus-logo.webp" },
     { name: "Los Angeles Times", file: "/trust bar logos/Los_Angeles_Times_Logo.webp" },
-    { name: "USA TODAY", file: "/trust bar logos/USA-TODAY-LOGO.webp" },
     { name: "HuffPost", file: "/trust bar logos/HUFFPOST-LOGO.webp" },
     { name: "Libération", file: "/trust bar logos/LIBERATION-LOGO.webp" },
-    { name: "Der Tagesspiegel", file: "/trust bar logos/TAGESSPIEGEL-LOGO.webp" },
     { name: "Monocle", file: "/trust bar logos/MONOCLE-LOGO.webp" },
-    { name: "ABC Australia", file: "/trust bar logos/abc-aus-logo.webp" },
   ];
 
   return (
@@ -87,8 +84,8 @@ export default function TrMediaPage() {
         </div>
       </section>
 
-      {/* BBC Documentary Spotlight */}
-      <BbcDocumentarySection locale={locale} />
+      {/* Official Media & Documentary Spotlight */}
+      <MediaFeaturesSection locale={locale} />
 
       {/* Full 25-Video Interactive YouTube Media Gallery */}
       <section className="py-20 bg-[#ededed] border-t border-[#415e79]/20">

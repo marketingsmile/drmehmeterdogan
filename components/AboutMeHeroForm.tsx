@@ -14,6 +14,7 @@ import {
   CaretDown
 } from "@phosphor-icons/react";
 import { Locale } from "@/lib/dictionary";
+import { CONTACT_INFO } from "@/data/contact";
 
 interface AboutMeHeroFormProps {
   locale: Locale;
@@ -213,7 +214,7 @@ export default function AboutMeHeroForm({ locale }: AboutMeHeroFormProps) {
             </div>
 
             <a
-              href="https://wa.me/905321234567"
+              href={CONTACT_INFO.whatsappHref}
               target="_blank"
               rel="noopener noreferrer"
               className="inline-flex items-center gap-1.5 text-emerald-700 hover:text-emerald-800 font-bold hover:underline transition-colors"

@@ -10,6 +10,7 @@ import {
   Envelope 
 } from "@phosphor-icons/react";
 import { getDictionary, Locale } from "@/lib/dictionary";
+import { CONTACT_INFO } from "@/data/contact";
 
 interface ConsultationSectionProps {
   locale: Locale;
@@ -64,10 +65,10 @@ export default function ConsultationSection({ locale }: ConsultationSectionProps
                     WhatsApp & Medical Helpline
                   </span>
                   <a
-                    href="tel:+905321234567"
+                    href={CONTACT_INFO.telHref}
                     className="font-bold text-[#0e263f] text-base sm:text-lg hover:text-[#415e79] transition-colors"
                   >
-                    +90 (532) 123 45 67
+                    {CONTACT_INFO.phoneDisplay}
                   </a>
                 </div>
               </div>
@@ -81,10 +82,10 @@ export default function ConsultationSection({ locale }: ConsultationSectionProps
                     Direct Email Consultation
                   </span>
                   <a
-                    href="mailto:info@drmehmeterdogan.com"
+                    href={`mailto:${CONTACT_INFO.email}`}
                     className="font-bold text-[#0e263f] text-base hover:text-[#415e79] transition-colors"
                   >
-                    info@drmehmeterdogan.com
+                    {CONTACT_INFO.email}
                   </a>
                 </div>
               </div>

@@ -31,10 +31,10 @@ export default function PatientJourney({ locale }: PatientJourneyProps) {
   const stepImages = [
     "/images/hair transplant doctor mehmet erdogan consultation with patient.jpg",
     "/images/vip airport transfer.JPG",
-    "/images/dr-mehmet-erdogan-consultation.webp",
-    "/images/smile hair clinic operation room.jpg",
+    "/images/dr mehmet erdogan before photo of patient.jpg",
+    "/images/Dr. Mehmet Erdogan canal opening procedure.jpg",
     "/images/smile hair clinic washing room.jpg",
-    "/images/smile hair clinic reception.jpg",
+    "/images/dr mehmet erdogan with consultation patient.jpg",
   ];
 
   const icons = [CalendarBlank, AirplaneTilt, UserCheck, Stethoscope, Sparkle, Handshake];

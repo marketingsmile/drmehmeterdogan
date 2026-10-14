@@ -11,54 +11,94 @@ export interface YouTubeVideoItem {
 
 export const ALL_YOUTUBE_VIDEOS: YouTubeVideoItem[] = [
   {
-    id: "qGQBCT2YXXA",
-    title: "Hair Transplant Consultation & Surgical Planning with Dr. Mehmet Erdoğan",
-    titleTr: "Dr. Mehmet Erdoğan ile Saç Ekimi Konsültasyonu ve Cerrahi Planlama",
-    category: "Consultation & Planning",
-    categoryTr: "Konsültasyon & Planlama",
-    duration: "12:40",
-    desc: "Detailed patient examination, donor capacity evaluation, and custom hairline design.",
-    descTr: "Kişiye özel saç çizgisi tasarımı ve donör kapasite analizi."
+    id: "v5R30A_xF4Y",
+    title: "4,600 Grafts Hair Transplant - Patient Consultation & Journey with Dr. Mehmet Erdoğan",
+    titleTr: "4.600 Greft Saç Ekimi - Dr. Mehmet Erdoğan ile Konsültasyon ve Hasta Serüveni",
+    category: "Patient Transformation",
+    categoryTr: "Hasta Değişimi",
+    duration: "12:15",
+    desc: "Complete surgical walkthrough and patient consultation personally conducted by Dr. Mehmet Erdoğan.",
+    descTr: "Dr. Mehmet Erdoğan ile baştan sona saç ekimi konsültasyonu, saç çizgisi planlaması ve operasyon süreci."
   },
   {
-    id: "cbcpqrIUnyQ",
-    title: "Live Sapphire FUE Hairline Restoration Surgery in Istanbul",
-    titleTr: "İstanbul'da Canlı Safir FUE Saç Çizgisi Restorasyonu",
-    category: "Surgical Technique",
-    categoryTr: "Cerrahi Teknik",
-    duration: "08:15",
-    desc: "Micro-channel incision step using real sapphire blades for maximum natural density.",
-    descTr: "Maksimum doğal sıklık için gerçek safir uçlarla mikro kanal açılışı."
+    id: "TMsAUMqTMgk",
+    title: "Post-Op Nutrition & Diet Plan After Hair Transplantation | Dr. Mehmet Erdoğan",
+    titleTr: "Saç Ekimi Sonrası Beslenme ve Diyet Rehberi | Dr. Mehmet Erdoğan",
+    category: "Post-Op Care",
+    categoryTr: "Operasyon Sonrası",
+    duration: "04:30",
+    desc: "Essential nutritional guidelines and vitamins to accelerate follicle growth and healing.",
+    descTr: "Greft tutunmasını ve iyileşmeyi hızlandıran beslenme ve takviye tavsiyeleri."
   },
   {
-    id: "fEDQdYYQ4nM",
-    title: "Direct Hair Implantation (DHI) Technique & Precision Implanters",
-    titleTr: "Doğrudan Saç Ekimi (DHI) Tekniği ve Choi Kalemi Hassasiyeti",
-    category: "DHI Technique",
-    categoryTr: "DHI Tekniği",
-    duration: "10:30",
-    desc: "Direct follicle implantation preserving existing hair without pre-channel cuts.",
-    descTr: "Mevcut saçları koruyarak tek adımda doğrudan kök nakli."
+    id: "Mn4TOWiVUQk",
+    title: "PRP Therapy Before vs After Hair Transplant | Dr. Mehmet Erdoğan",
+    titleTr: "Saç Ekiminde PRP Operasyon Öncesi mi Sonrası mı Yapılmalı? | Dr. Mehmet Erdoğan",
+    category: "Surgical Masterclass",
+    categoryTr: "Cerrahi Rehber",
+    duration: "05:10",
+    desc: "Clinical evaluation of Platelet-Rich Plasma in maximizing graft survival and density.",
+    descTr: "Köklerin tutunmasını ve saç yoğunluğunu artıran PRP tedavisinin doğru zamanlaması."
   },
   {
-    id: "Tg1-2P3Cscs",
-    title: "Patient Transformation: 12-Month Hair Growth Final Result",
-    titleTr: "Hasta Değişimi: 12 Aylık Saç Büyümesi Final Sonucu",
-    category: "Patient Results",
-    categoryTr: "Hasta Sonuçları",
-    duration: "09:20",
-    desc: "Full year progression from post-op to complete dense hairline restoration.",
-    descTr: "Operasyon sonrası 12 aylık eksiksiz saç gelişim süreci."
+    id: "pDUnYo9STw0",
+    title: "Is Hair Transplant Noticeable After Surgery? Natural Hairline Design",
+    titleTr: "Saç Ekimi Dışarıdan Belli Olur mu? Doğal Saç Çizgisi | Dr. Mehmet Erdoğan",
+    category: "Aesthetic Design",
+    categoryTr: "Doğal Görünüm",
+    duration: "06:20",
+    desc: "How Dr. Erdoğan ensures completely undetectable, age-appropriate, and natural graft angles.",
+    descTr: "Fark edilmeyen, tamamen doğal açı ve yönlerle saç ekimi prensipleri."
   },
   {
-    id: "j9N6k2IoEi4",
-    title: "Why Choose Smile Hair Clinic & Dr. Mehmet Erdoğan",
-    titleTr: "Neden Smile Hair Clinic & Dr. Mehmet Erdoğan?",
-    category: "Surgeon & Clinic",
-    categoryTr: "Hekim & Klinik",
-    duration: "06:45",
-    desc: "Clinical excellence, patient safety protocols, and the True™ Philosophy.",
-    descTr: "Klinik mükemmeliyet, hasta güvenliği ve True™ Felsefesi."
+    id: "Q6TbPA9gnPw",
+    title: "Is Bleeding Normal After Hair Transplantation? Medical Safety Protocol",
+    titleTr: "Saç Ekimi Sonrası Kanama Normal mi? Tıbbi Güvenlik Protokolü | Dr. Mehmet Erdoğan",
+    category: "Medical Safety",
+    categoryTr: "Tıbbi Güvenlik",
+    duration: "03:50",
+    desc: "Post-operative scalp expectations, clot protection, and peace of mind advice.",
+    descTr: "Operasyon sonrası ilk günlerde dikkat edilmesi gereken tıbbi güvenlik kuralları."
+  },
+  {
+    id: "v0H94iyJR7M",
+    title: "When Do Grafts Become Fully Secure After Surgery? | Dr. Mehmet Erdoğan",
+    titleTr: "Ekilen Greftler Ne Zaman Tam Olarak Tutunur ve Sabitlenir? | Dr. Mehmet Erdoğan",
+    category: "Recovery Milestones",
+    categoryTr: "İyileşme Takvimi",
+    duration: "04:45",
+    desc: "Critical timeline of follicle anchor strength and when you can return to sports and daily life.",
+    descTr: "Saç köklerinin deriye kaynaşma süreci ve normal hayata dönüş aşamaları."
+  },
+  {
+    id: "NvHd1j6EZkc",
+    title: "How to Sleep Correctly After Hair Transplantation | Sleeping Position Guide",
+    titleTr: "Saç Ekimi Sonrası Nasıl Uyunmalı? Doğru Uyku Pozisyonu | Dr. Mehmet Erdoğan",
+    category: "Aftercare Guide",
+    categoryTr: "Sonrası Bakım",
+    duration: "05:15",
+    desc: "Protecting newly implanted follicles at night using ergonomic neck pillows and 45-degree elevation.",
+    descTr: "İlk günlerde ekilen kökleri korumak için boyun yastığı ve doğru yatış açıları."
+  },
+  {
+    id: "RMdNuZl0S5k",
+    title: "Does Hair Transplantation Have Any Side Effects? Doctor Insights",
+    titleTr: "Saç Ekiminin Herhangi Bir Yan Etkisi Var mı? | Dr. Mehmet Erdoğan",
+    category: "Surgeon Insights",
+    categoryTr: "Hekim Bilgilendirmesi",
+    duration: "06:05",
+    desc: "Honest medical analysis on temporary swelling, numbness, and transient post-op effects.",
+    descTr: "Şişlik, hissizlik ve geçici etkiler üzerine şeffaf cerrahi değerlendirmeler."
+  },
+  {
+    id: "tOoYRZhvDLg",
+    title: "Do You Need Medications After Hair Transplantation? Prescription Guide",
+    titleTr: "Saç Ekimi Sonrası İlaç Kullanmak Zorunlu mu? | Dr. Mehmet Erdoğan",
+    category: "Medications",
+    categoryTr: "İlaç & Tedavi",
+    duration: "05:30",
+    desc: "Antibiotics, painkillers, and hair retention medications prescribed after surgery.",
+    descTr: "Operasyon sonrası reçete edilen antibiyotik, ödem giderici ve destek ilaçları."
   },
   {
     id: "kDClf2GoQCc",

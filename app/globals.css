@@ -1,0 +1,136 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,300;0,400;0,500;0,600;0,700;1,400;1,600;1,700&family=Alex+Brush&family=Caveat:wght@600;700&display=swap');
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  --font-sans: 'Poppins', sans-serif;
+  --font-heading: 'Poppins', sans-serif;
+  --font-signature: 'Alex Brush', 'Caveat', cursive;
+  --color-primary-navy: #0e263f;
+  --color-slate-blue: #415e79;
+  --color-light-bg: #ededed;
+}
+
+html {
+  scroll-behavior: smooth;
+  color-scheme: light;
+}
+
+body {
+  background-color: #ededed;
+  color: #0e263f;
+  font-family: var(--font-sans);
+  overflow-x: hidden;
+}
+
+/* Custom Scrollbar */
+::-webkit-scrollbar {
+  width: 10px;
+}
+
+::-webkit-scrollbar-track {
+  background: #ededed;
+}
+
+::-webkit-scrollbar-thumb {
+  background: #415e79;
+  border-radius: 5px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: #0e263f;
+}
+
+/* Signature Logo Font Class */
+.logo-signature {
+  font-family: var(--font-signature);
+  font-size: 2.2rem;
+  font-weight: 700;
+  color: #0e263f;
+  line-height: 1;
+}
+
+/* Custom Utilities for Light Medical Luxury Theme */
+.glass-panel {
+  background: rgba(255, 255, 255, 0.95);
+  backdrop-filter: blur(16px);
+  -webkit-backdrop-filter: blur(16px);
+  border: 1px solid rgba(65, 94, 121, 0.15);
+  box-shadow: 0 10px 30px -5px rgba(14, 38, 63, 0.05);
+}
+
+.glass-panel-hover {
+  transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.glass-panel-hover:hover {
+  background: rgba(255, 255, 255, 1);
+  border-color: rgba(14, 38, 63, 0.4);
+  box-shadow: 0 15px 35px -5px rgba(14, 38, 63, 0.12);
+  transform: translateY(-2px);
+}
+
+/* Premium Navy Gradient Backgrounds */
+.bg-navy-gradient {
+  background: radial-gradient(ellipse at 50% 25%, #173656 0%, #0e263f 55%, #071524 100%);
+}
+
+.bg-navy-linear {
+  background: linear-gradient(180deg, #091d34 0%, #0e263f 50%, #061322 100%);
+}
+
+/* Premium Color Gradients (Deep Navy & Slate Blue) */
+.amber-text-gradient {
+  background: linear-gradient(135deg, #0e263f 0%, #415e79 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+.brand-text-gradient {
+  background: linear-gradient(135deg, #0e263f 0%, #415e79 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+.orange-text-gradient {
+  background: linear-gradient(135deg, #0e263f 0%, #415e79 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+.amber-gradient {
+  background: linear-gradient(135deg, #0e263f 0%, #173656 100%);
+}
+
+.navy-slate-gradient {
+  background: linear-gradient(135deg, #0e263f 0%, #415e79 100%);
+}
+
+.slate-orange-gradient {
+  background: linear-gradient(135deg, #0e263f 0%, #415e79 100%);
+}
+
+.amber-border-glow {
+  box-shadow: 0 0 25px rgba(14, 38, 63, 0.15);
+}
+
+.hero-radial-glow {
+  background: radial-gradient(circle at 50% 30%, rgba(14, 38, 63, 0.08) 0%, rgba(65, 94, 121, 0.06) 40%, rgba(237, 237, 237, 0) 70%);
+}
+
+/* Hide horizontal scrollbars on carousels while keeping scrollability */
+.no-scrollbar::-webkit-scrollbar {
+  display: none;
+}
+.no-scrollbar {
+  -ms-overflow-style: none;
+  scrollbar-width: none;
+}
+
+/* Headings font specification - Poppins Bold (700) */
+h1, h2, h3, h4, h5, h6, .font-heading {
+  font-family: var(--font-heading);
+  font-weight: 700;
+}
